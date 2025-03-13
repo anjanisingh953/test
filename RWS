@@ -1,0 +1,152 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// function scopeTest() {
+//     var x = 10;
+//     if (true) {
+//         var x = 20;
+//         let y = 30;
+//     }
+//     console.log(x); 
+//     console.log(y); 
+// }
+
+// scopeTest();
+
+
+// // 20
+// // Error
+
+
+// var x = 1;
+
+// function foo() {
+//     console.log(x); // ❓
+//     var x = 2;
+//     console.log(x); // ❓
+// }
+
+// foo();
+// console.log(x); // ❓
+
+
+//  //1
+//  //2
+//  //1
+
+
+//  function outer (){
+//      var x =10;
+
+//      return function inner(){
+//          x++;
+//      }
+//  }
+
+//  const result = outer();
+//  const result2 = result();
+
+//  console.log(result2);
+//  console.log(result2);
+
+//  function test(){
+
+//      var count = 0;
+
+//      if(count == 1){
+//          return false;
+//      }
+
+//     return function inner(){
+//         count++;    
+//     }
+
+//  }
+
+//  const result  = test();
+//  console.log(result())
+//  const result1 = test();
+//  console.log(result1())
+
+
+
+var feature = [
+    { id: 1, name: 'key_1' },
+    { id: 2, name: 'key_2' },
+    { id: 3, name: 'key_3' },
+    { id: 4, name: 'key_4' }];
+var master = [
+    { id: 1, featureId: 1, name: 'master_1' },
+    { id: 2, featureId: 1, name: 'master_1' },
+    { id: 3, featureId: 2, name: 'master_1' },
+    { id: 4, featureId: 3, name: 'master_1' },
+    { id: 5, featureId: 3, name: 'master_1' },
+    { id: 6, featureId: 1, name: 'master_1' },
+    { id: 7, featureId: 4, name: 'master_1' },];
+// -----------------------------------
+// var output = {    'key_1': [1,2,6],    'key_2': [3],    'key_3': [4,5],    'key_4': [7]};
+
+const output = []
+//  for(let i =0; i< feature.length; i++){
+
+//      output.push(feature[i].name)
+
+//  }
+
+for (let i = 0; i < master.length; i++) {
+
+    for (x = 1; x < feature.length; x++) {
+        if (master[i].featureId == feature[i].id) {
+            console.log(master[i].featureId)
+        }
+    }
+
+
+
+}
+
+
+
+
+console.log(output)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
