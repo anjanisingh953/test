@@ -1,17 +1,18 @@
-const arr = [2,3,4,2,4,5,6,7,8,9,11,4,9]
-const duplicate = [];
+function fibo(num) {
+    const arr = [];
+    for (let i = 1; i < num; i++) {
 
+        if (arr.length == 0) {
+            arr[0] = 0
+        }
+        if (i == 1) {
+            arr[i] = i
+        } else {
+            arr[i] = arr[i - 1] + arr[i - 2];
+        }
 
-arr.reduce((acc,val)=>{
-
-    if(!acc.includes(val)){
-        acc.push(val);
-    }else{
-        duplicate.push(val);
     }
-    return acc;
 
-},[])
+    return arr;
+}
 
-
-console.log(duplicate)

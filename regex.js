@@ -29,14 +29,14 @@ syntax: reg.test(str);
 3.match() : It returns an array for match results OR null for unmatch results
 syntax: str.match(regex);
 
-4.match() : It returns index of first match OR -1
+4.search() : It returns index of first match OR -1
 syntax: str.search(regex);
 
 5.replace() : It returns new replaced string with all the replacement
 syntax: str.replace(regex,'Expected_Str');
 
 6.split() : It returns an array if match
-syntax: str.replace(regex);
+syntax: str.split(regex);
 
 
 //Metacharacter symbol in regex

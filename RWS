@@ -85,68 +85,18 @@ var master = [
     { id: 7, featureId: 4, name: 'master_1' },];
 // -----------------------------------
 // var output = {    'key_1': [1,2,6],    'key_2': [3],    'key_3': [4,5],    'key_4': [7]};
+const output = {};
 
-const output = []
-//  for(let i =0; i< feature.length; i++){
+for(let i =0; i<master.length;i++){
 
-//      output.push(feature[i].name)
-
-//  }
-
-for (let i = 0; i < master.length; i++) {
-
-    for (x = 1; x < feature.length; x++) {
-        if (master[i].featureId == feature[i].id) {
-            console.log(master[i].featureId)
+        if(feature[master[i].featureId-1].id === master[i].featureId){
+        const featureName = feature[master[i].featureId - 1].name;
+                if (!output[featureName]) {
+                    output[featureName] = [];
+                }
+                output[featureName].push(master[i].id);
         }
-    }
-
-
 
 }
 
-
-
-
-console.log(output)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log('out',output);
