@@ -1,47 +1,29 @@
-//   Input: arr[] = {3, 1, 3}
-//          Output: Missing = 2, Repeating = 3
-//           Explanation: In the array, 2 is missing and 3 occurs twice 
+//Count duplicate values from array code start
 
-//           Input: arr[] = {4, 3, 6, 2, 1, 1}
-//             Output: Missing = 5, Repeating = 1
-
-const arr = [4, 3, 6, 2, 1, 1];
-
-function findmissingnumber(arr){
     
-    for(let i=0; i<arr.length;i++){
-        console.log(i)
-    }
+    const arr2 = [10,20,30,20,40,10,20,30];
     
-};
-
-findmissingnumber(arr)
-
-
-
-
-// const arr = [
-//     {fname:"Anjani", lname:"Singh", age:25},
-//     {fname:"Vivek", lname:"Desai", age:50},
-//     {fname:"Deepika", lname:"Singh", age:20},
-//     {fname:"Mayank", lname:"Sharma", age:30}
-// ];
-
-// const output = arr.reduce((max,curr)=>{
-
-//    if(curr.age>max){
-//     max = curr.age
-//    }
-//    return max;
-// },0);
+    // FIRST WAY
+    var newarr2 = arr2.reduce(function(acc, val){
+        if (!acc[val]) {
+            acc[val] = 1;
+        } else {
+            acc[val]++;
+        }
+        return acc;
+    }, {});
+    console.log(newarr2); 
 
 
-// console.log(output)
+       //SECOND WAY 
 
+    // const newarr2 = arr2.reduce((acc,val)=>{
 
-// console.log(this)
-// function test(){
-//     console.log(this)
-
-// }
-// test();
+    //         if(acc[val] == undefined){
+    //             acc[val] = 1;
+    //         }else{
+    //             acc[val]++;
+    //         }
+    //         return acc;
+    // },{}) 
+    // console.log(newarr2);        

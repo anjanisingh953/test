@@ -1,18 +1,9 @@
-function fibo(num) {
-    const arr = [];
-    for (let i = 1; i < num; i++) {
+const arr = [10,20,30,40,50,60];
+const delete_item = 40;
+const index_num = arr.indexOf(30);
 
-        if (arr.length == 0) {
-            arr[0] = 0
-        }
-        if (i == 1) {
-            arr[i] = i
-        } else {
-            arr[i] = arr[i - 1] + arr[i - 2];
-        }
-
-    }
-
-    return arr;
-}
-
+for(let i =index_num ; i<arr.length-1; i++){
+    arr[i] = arr[i+1];
+ }
+arr.length = arr.length-1 
+console.log(arr);
