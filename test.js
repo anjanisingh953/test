@@ -1,19 +1,18 @@
-const str1 = 'hello'
-const str2 = 'he0ll'
+function checkPalindrome (str){
+    let start = 0;
+    let end = str.length-1;
+    let result = true;
 
-function checkPalindrome(str1,str2){
-    if(str1.length != str2.length) return false;
-
-    let obj = {}
-    for(let ch of str1){
-        obj[ch] = (obj[ch]==undefined)?1:++obj[ch];
+    while(end>start){
+        if(str[start] != str[end]) result=false;
+        start++;
+        end--;
     }
-
-    for(let ch of str2){
-        if(!obj[ch]){return false}
-        --obj[ch]        
-    }
-    return true;
+    
+    return result;
 }
 
-console.log(checkPalindrome(str1,str2))
+const result = checkPalindrome('level');
+console.log(result)
+
+
