@@ -1,3 +1,5 @@
+
+//Sorting with bubble sort algorithm
 const arr = [20,2,5,8,3,1,56,85,195,4];
 
 for(let i = 0; i < arr.length;i++){

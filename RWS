@@ -99,4 +99,26 @@ for(let i =0; i<master.length;i++){
 
 }
 
+
+// solution 2 myself solved without any chatgpt
+
+// for(let i = 0; i<master.length; i++){
+//     // console.log(feature[master[i].featureId-1].name)
+//     if(!obj[feature[master[i].featureId-1].name]){
+//       obj[feature[master[i].featureId-1].name] =[master[i].id]
+//     }else{
+//       obj[feature[master[i].featureId-1].name].push(master[i].id)
+//     } 
+// }
+        // OR
+// for(let i = 0; i<master.length; i++){
+//     // console.log(feature[master[i].featureId-1].name)
+//     const key = feature[master[i].featureId-1].name;
+//     if(!obj[key]){
+//       obj[key] =[master[i].id]
+//     }else{
+//       obj[key][obj[key].length] = master[i].id
+//     } 
+// }
+
 console.log('out',output);

@@ -1,9 +1,14 @@
-let num = 687
-let reverse_num = 0;
-
-while(num>0){
-    reverse_num = reverse_num*10+num%10;
-    num = Math.floor(num/10);
+function fibo(num) {
+  let n1 = 0; let n2 =1; let nextTerm;
+  const arr = [];
+  for(let i = 0; i<num; i++){
+//      arr.push(n1);
+        arr[i] = n1;
+        nextTerm = n1+n2;
+        n1 = n2;
+        n2 = nextTerm;
+  }
+  return arr;
 }
-
-console.log(reverse_num);
+const result = fibo(5)
+console.log('result',result);
