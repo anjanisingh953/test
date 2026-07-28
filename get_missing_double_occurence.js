@@ -7,10 +7,11 @@ let arr = [4, 3, 6, 2, 1, 1];
 
 
 
+const arr = [4, 6, 1, 2, 3, 2];
+
 function findMissingAndRepeatElement(arr) {
 
-    let n = arr.length;
-
+    const n = arr.length;
     let repeating = -1;
     let missing = -1;
 
@@ -19,7 +20,6 @@ function findMissingAndRepeatElement(arr) {
         let count = 0;
 
         for (let j = 0; j < n; j++) {
-
             if (arr[j] === i) {
                 count++;
             }
@@ -27,18 +27,20 @@ function findMissingAndRepeatElement(arr) {
 
         if (count === 2) {
             repeating = i;
-        } 
-        else if (count === 0) {
+        }
+
+        if (count === 0) {
             missing = i;
         }
 
         if (repeating !== -1 && missing !== -1) {
-            return [repeating, missing];
+            break;
         }
     }
 
     return [repeating, missing];
 }
+
 
 const result = findMissingAndRepeatElement(arr);
 console.log(result);
