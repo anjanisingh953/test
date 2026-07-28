@@ -1,18 +1,16 @@
-function checkPalindrome (str){
-    let start = 0;
-    let end = str.length-1;
-    let result = true;
-
-    while(end>start){
-        if(str[start] != str[end]) result=false;
-        start++;
-        end--;
+class Student{
+    constructor(fname,city,age){
+        this.fname = fname;
+        this.city = city;
+        this.age = age;
     }
     
-    return result;
+    static sum(){
+        console.log(5+6)
+    }
 }
 
-const result = checkPalindrome('level');
-console.log(result)
-
-
+const Anjani = new Student('Anjani','Bihar',25)
+const Vikas = new Student('Vikas','Bihar',25)
+console.log(Anjani)
+console.log(Vikas)
